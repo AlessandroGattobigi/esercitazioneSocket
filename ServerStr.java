@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 import java.net.*;
 
 public class ServerStr{
@@ -33,7 +32,7 @@ public class ServerStr{
       stringaModificata = stringaRicevuta.toUpperCase();
       System.out.println("7 Server invia: " + stringaModificata);
       outVersoClient.writeBytes(stringaModificata + '\n');
-      System.out.println("9...Chiusura della connessione"");
+      System.out.println("9...Chiusura della connessione");
       client.close();
     }catch(IOException e){
       System.out.println(e.getMessage());

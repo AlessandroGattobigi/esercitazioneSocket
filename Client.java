@@ -1,8 +1,7 @@
 import java.io.*;
-import java.util.*;
 import java.net.*;
 
-public class ClientStr {
+public class Client {
   String nameServer = "localhost";
   int portaServer= 12345;
   Socket miosocket;
@@ -22,7 +21,7 @@ public class ClientStr {
     }catch(UnknownHostException e){
       System.err.println("Host sconosciuto");
     }catch(Exception e){
-      System.err.println("Errore durante la connessione"");
+      System.err.println("Errore durante la connessione");
     }
     return miosocket;
   }
@@ -35,7 +34,7 @@ public class ClientStr {
       outVersoServer.writeBytes(stringaUtente + '\n');
       stringaRicevutaDalServer = inDalServer.readLine();
       System.out.println("8...Risposta dal server " + stringaRicevutaDalServer);
-      Syste.out.println("9...Chiusura della connessione");
+      System.out.println("9...Chiusura della connessione");
       miosocket.close();
     }catch(Exception e){
       System.out.println(e.getMessage()); 
